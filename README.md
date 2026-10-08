@@ -1,4 +1,4 @@
-\ SINGKO Personal Portfolio
+SINGKO Personal Portfolio
 
 
 
@@ -6,7 +6,7 @@ SINGKO is a five-member personal portfolio website created for our Integrative P
 
 
 
-\ About the Project
+About the Project
 
 
 
@@ -14,69 +14,69 @@ This website presents our team members, personal introductions, projects, skills
 
 
 
-\Team Members
+Team Members
 
 
 
-\- Kholoe Balallo – UI/UX Developer
+- Kholoe Balallo – UI/UX Developer
 
-\- Roselle Garcera – Web Developer
+- Roselle Garcera – Web Developer
 
-\- Karel Alwina Santos – Documentation
+- Karel Alwina Santos – Documentation
 
-\- Ma. Angela Sapno – Web Developer
+- Ma. Angela Sapno – Web Developer
 
-\- Anne Camille Umali – QA Engineer
-
-
-
-\ Technologies Used
+- Anne Camille Umali – QA Engineer
 
 
 
-\- HTML
-
-\- CSS
-
-\- JavaScript
-
-\- Node.js
-
-\- Express.js
-
-\- MySQL
-
-\- Font Awesome
+ Technologies Used
 
 
 
-\## Features
+- HTML
+
+- CSS
+
+- JavaScript
+
+- Node.js
+
+- Express.js
+
+- MySQL
+
+- Font Awesome
 
 
 
-\- Home page
-
-\- About Us page
-
-\- Team member profiles
-
-\- Personal introductions
-
-\- Project showcase
-
-\- Achievements
-
-\- Contact form
-
-\- Responsive design
-
-\- MySQL database integration
-
-\- Object-Oriented Programming
+ Features
 
 
 
-\## Project Structure
+- Home page
+
+- About Us page
+
+- Team member profiles
+
+- Personal introductions
+
+- Project showcase
+
+- Achievements
+
+- Contact form
+
+- Responsive design
+
+- MySQL database integration
+
+- Object-Oriented Programming
+
+
+
+ Project Structure
 
 
 
