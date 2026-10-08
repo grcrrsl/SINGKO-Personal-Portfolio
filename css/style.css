@@ -1,0 +1,2270 @@
+/* ========================================
+   GLOBAL SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: min(1250px, calc(100% - 60px));
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(247, 247, 245, 0.96);
+
+    border-bottom: 1px solid #dededb;
+
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 72px;
+}
+
+.nav-container {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.brand span {
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #666;
+
+    font-size: 0.95rem;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #111;
+}
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 82% 20%,
+            #dededb,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            #e9e9e6,
+            transparent 25%
+        );
+}
+
+.hero-container {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, 0.7fr);
+
+    gap: 80px;
+
+    align-items: center;
+
+    padding: 100px 0;
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #666;
+
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(
+        3.2rem,
+        7vw,
+        6.3rem
+    );
+
+    line-height: 0.98;
+
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #777;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    color: #666;
+
+    margin: 30px 0;
+
+    font-size: 1.05rem;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 13px 22px;
+
+    border-radius: 999px;
+
+    border: 1px solid #111;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #111;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    background: transparent;
+}
+
+
+/* ========================================
+   HERO CARD
+======================================== */
+
+.hero-card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 28px;
+
+    padding: 42px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 55px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+.hero-number {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 5rem;
+
+    font-weight: 700;
+}
+
+.hero-card p {
+    color: #666;
+
+    margin-bottom: 4px;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-alt {
+    background: #eeeeeb;
+}
+
+.section-heading {
+    max-width: 700px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading h2,
+.contact-information h2 {
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4rem
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+
+    margin-bottom: 18px;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   MEMBER GRID
+======================================== */
+
+.member-grid {
+    display: grid;
+
+    /*
+        Five columns on large screens.
+        Each card gets enough width for
+        names and information.
+    */
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+/* ========================================
+   MEMBER CARD
+======================================== */
+
+.member-card {
+    min-width: 0;
+
+    min-height: 530px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+
+    border: 1px solid #dededb;
+
+    border-radius: 22px;
+
+    padding: 26px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(
+            0,
+            0,
+            0,
+            0.09
+        );
+}
+
+
+/* ========================================
+   MEMBER AVATAR
+======================================== */
+
+.member-avatar {
+    width: 78px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 20px;
+
+    background: #eeeeeb;
+
+    color: #111;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    margin-bottom: 24px;
+}
+
+
+/* ========================================
+   MEMBER NAME
+======================================== */
+
+.member-card h3 {
+    font-size: 1.15rem;
+
+    line-height: 1.35;
+
+    margin-bottom: 5px;
+
+    overflow-wrap: break-word;
+}
+
+
+/* ========================================
+   MEMBER ROLE
+======================================== */
+
+.member-role {
+    color: #777;
+
+    font-size: 0.88rem;
+
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   MEMBER INFORMATION
+======================================== */
+
+.member-card p {
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.55;
+
+    overflow-wrap: break-word;
+}
+
+.member-card p strong {
+    color: #555;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   MEMBER INTERESTS
+======================================== */
+
+.member-interests {
+    margin-top: 16px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eeeeeb;
+}
+
+
+/* ========================================
+   TAGS
+======================================== */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 12px;
+}
+
+.tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 999px;
+
+    padding: 5px 10px;
+
+    background: #fff;
+
+    color: #333;
+
+    font-size: 0.7rem;
+
+    max-width: 100%;
+    box-sizing: border-box;
+
+    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+/* =========================================
+   MEMBER PHOTO UPLOAD
+   ========================================= */
+
+.member-avatar {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+}
+
+.member-avatar:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Upload overlay */
+.upload-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Show "Change Photo" when hovering */
+.member-avatar:hover .upload-overlay {
+    opacity: 1;
+}
+
+/* Make overlay visible when keyboard-focused */
+.member-avatar:focus .upload-overlay {
+    opacity: 1;
+}
+
+
+/* ========================================
+   PROJECTS
+======================================== */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.project-card {
+    min-width: 0;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+.project-number {
+    color: #777;
+
+    font-size: 0.78rem;
+
+    margin-bottom: auto;
+
+    padding-bottom: 50px;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 13px;
+}
+
+.project-card p {
+    color: #666;
+
+    font-size: 0.92rem;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.contact-description {
+    color: #666;
+
+    max-width: 500px;
+}
+
+.contact-details {
+    margin-top: 35px;
+
+    display: grid;
+
+    gap: 18px;
+}
+
+.contact-detail {
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 14px;
+}
+
+.contact-detail span {
+    color: #666;
+
+    margin-top: 2px;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.contact-form {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 18px 45px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-weight: 700;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    background: #f7f7f5;
+
+    border-radius: 12px;
+
+    padding: 13px 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111;
+
+    background: white;
+}
+
+.error {
+    display: block;
+
+    color: #a33;
+
+    font-size: 0.78rem;
+
+    min-height: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form-status {
+    text-align: center;
+
+    margin-top: 15px;
+
+    min-height: 22px;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    border-top: 1px solid #ddd;
+
+    padding: 25px 0;
+}
+
+.footer-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: #666;
+
+    font-size: 0.8rem;
+}
+
+
+/* ========================================
+   LARGE LAPTOP / TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .container {
+        width:
+            min(
+                100% - 40px,
+                1050px
+            );
+    }
+
+    .member-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .member-card {
+        min-height: 500px;
+    }
+
+    .hero-container {
+        gap: 50px;
+    }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .hero-card {
+        width: min(
+            100%,
+            400px
+        );
+    }
+
+    .member-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+        width:
+            calc(100% - 28px);
+    }
+
+
+    /* -------------------------------
+       NAVIGATION
+    -------------------------------- */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 14px;
+        right: 14px;
+
+        background: white;
+
+        border: 1px solid #ddd;
+
+        border-radius: 16px;
+
+        padding: 18px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+
+        box-shadow:
+            0 15px 40px rgba(
+                0,
+                0,
+                0,
+                0.08
+            );
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+
+        padding: 8px;
+    }
+
+
+    /* -------------------------------
+       HERO
+    -------------------------------- */
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            3rem,
+            15vw,
+            4.5rem
+        );
+
+        letter-spacing: -3px;
+    }
+
+
+    /* -------------------------------
+       SECTIONS
+    -------------------------------- */
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* -------------------------------
+       MEMBER CARDS
+    -------------------------------- */
+
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-card {
+        min-height: auto;
+    }
+
+
+    /* -------------------------------
+       PROJECTS
+    -------------------------------- */
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -------------------------------
+       CONTACT
+    -------------------------------- */
+
+    .contact-form {
+        padding: 24px;
+    }
+
+
+    /* -------------------------------
+       FOOTER
+    -------------------------------- */
+
+    .footer-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+/* ========================================
+   OUR VIDEOS
+======================================== */
+
+.video-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.video-card {
+    min-width: 0;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.video-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+.video-container {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #111;
+}
+
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.video-content {
+    padding: 24px;
+}
+
+
+.video-content h3 {
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+}
+
+
+.video-content p {
+    color: #666;
+
+    font-size: 0.92rem;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   VIDEO RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+
+    .video-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ========================================
+   OUR PERSONAL INTRODUCTIONS
+======================================== */
+
+.introduction-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.introduction-card {
+    min-width: 0;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.introduction-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+/* Introduction number */
+
+.introduction-number {
+    color: #777;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+
+/* Member name */
+
+.introduction-card h3 {
+    font-size: 1.5rem;
+
+    line-height: 1.25;
+
+    margin-bottom: 6px;
+}
+
+
+/* Member role */
+
+.introduction-role {
+    color: #777;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* Introduction paragraph */
+
+.introduction-card > p:not(.introduction-role) {
+    color: #666;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Skills and interests */
+
+.introduction-details {
+    border-top: 1px solid #eeeeeb;
+
+    padding-top: 15px;
+
+    margin-top: 15px;
+}
+
+
+.introduction-details strong {
+    display: block;
+
+    color: #555;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 4px;
+}
+
+
+.introduction-details p {
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   INTRODUCTION RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+
+    .introduction-grid {
+        grid-template-columns: 1fr;
+    }
+
+     .introduction-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+/* ========================================
+   CENTER LAST INTRODUCTION CARD
+======================================== */
+
+.introduction-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: start;
+}
+/* ========================================
+   PROJECT ACHIEVEMENT
+======================================== */
+
+.project-achievement {
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+.project-achievement strong {
+    color: #555;
+
+    font-weight: 700;
+}
+/* ========================================
+   PROJECT IMAGE
+======================================== */
+
+.project-image-container {
+    width: 100%;
+    height: 220px;
+
+    margin-bottom: 25px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #f2f2f0;
+}
+
+
+.project-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.project-card:hover .project-image {
+    transform: scale(1.03);
+}
+
+
+/* ========================================
+   PROJECT ACHIEVEMENT
+======================================== */
+
+.project-achievement {
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+.project-achievement strong {
+    color: #555;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   PROJECT RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .project-image-container {
+        height: 180px;
+    }
+
+}
+/* ========================================
+   PROJECT IMAGE CLICK
+======================================== */
+
+.project-image {
+    cursor: zoom-in;
+}
+
+
+/* ========================================
+   FULL-SCREEN IMAGE VIEWER
+======================================== */
+
+.image-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    cursor: zoom-out;
+}
+
+
+/* Full-screen image */
+
+.lightbox-image {
+    max-width: 95vw;
+
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 60px rgba(
+            0,
+            0,
+            0,
+            0.5
+        );
+
+    cursor: default;
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.lightbox-close {
+    position: fixed;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .image-lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-image {
+        max-width: 96vw;
+
+        max-height: 85vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 15px;
+    }
+
+}
+/* ============================================================
+   SOCIAL MEDIA
+============================================================ */
+
+.member-social-section {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.social-title {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.member-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 999px;
+
+    color: #222;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    transition: all 0.2s ease;
+}
+
+.social-link i {
+    width: 18px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.social-link:hover {
+    background: #f5f5f5;
+    border-color: #bbb;
+}
+
+/* ============================================================
+   NAVIGATION HOVER + ACTIVE UNDERLINE
+============================================================ */
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: currentColor;
+
+    transition: width 0.25s ease;
+}
+
+/* Hover */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active page */
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ============================================================
+   MEMBER LIKE BUTTON
+============================================================ */
+
+.member-like-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.member-like-button {
+    border: 1px solid #d8d8d8;
+    background: #ffffff;
+    color: #333333;
+
+    border-radius: 30px;
+
+    padding: 10px 18px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.member-like-button:hover {
+    transform: translateY(-2px);
+    border-color: #999999;
+}
+
+
+.member-like-button:active {
+    transform: scale(0.96);
+}
+
+
+.member-like-button i {
+    font-size: 17px;
+}
+
+
+/* Liked state */
+
+.member-like-button.liked {
+    color: #e63946;
+    border-color: #e63946;
+}
+
+
+.member-like-button.liked:hover {
+    background-color: #fff5f5;
+}
+
+
+/* Like count */
+
+.like-count {
+    font-weight: 600;
+}
+/* ========================================
+   CONTACT PAGE ANIMATION
+======================================== */
+
+#contact .contact-information {
+    opacity: 0;
+    animation: contactSlideLeft 1s ease-out forwards;
+}
+
+#contact .contact-form {
+    opacity: 0;
+    animation: contactSlideRight 1s ease-out 0.2s forwards;
+}
+
+
+/* Contact details */
+
+#contact .contact-detail {
+    opacity: 0;
+    animation: contactFadeUp 0.7s ease-out forwards;
+}
+
+#contact .contact-detail:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+#contact .contact-detail:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+#contact .contact-detail:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+
+/* Form fields */
+
+#contact .contact-form .form-group {
+    opacity: 0;
+    animation: contactFadeUp 0.7s ease-out forwards;
+}
+
+#contact .contact-form .form-group:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+#contact .contact-form .form-group:nth-child(2) {
+    animation-delay: 0.65s;
+}
+
+#contact .contact-form .form-group:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+#contact .contact-form .form-group:nth-child(4) {
+    animation-delay: 0.95s;
+}
+
+
+/* Send button */
+
+#contact .contact-form .btn {
+    opacity: 0;
+    animation: contactFadeUp 0.7s ease-out 1.1s forwards;
+}
+
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+@keyframes contactSlideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes contactSlideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes contactFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* ========================================
+   SEND MESSAGE LOADING ANIMATION
+======================================== */
+
+.send-button-spinner {
+    display: none;
+
+    width: 16px;
+    height: 16px;
+
+    margin-left: 9px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: sendButtonSpin 0.7s linear infinite;
+}
+
+#sendButton.loading {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#sendButton.loading .send-button-spinner {
+    display: inline-block;
+}
+
+@keyframes sendButtonSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+/* ========================================
+   VIDEO CAROUSEL
+======================================== */
+
+.video-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 45px;
+}
+
+
+/* Video cards container */
+
+.video-grid {
+    display: flex;
+    gap: 24px;
+
+    width: 100%;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    padding: 20px 5px 30px;
+
+    scrollbar-width: none;
+}
+
+.video-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Individual video cards */
+
+.video-grid .video-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: calc((100% - 48px) / 3);
+
+    scroll-snap-align: start;
+}
+
+
+/* ========================================
+   CAROUSEL ARROWS
+======================================== */
+
+.carousel-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+
+    transition: 0.25s ease;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.20);
+}
+
+.carousel-prev {
+    left: -30px;;
+}
+
+.carousel-next {
+    right: -30px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .video-grid .video-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+        min-width: calc((100% - 24px) / 2);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .video-carousel-wrapper {
+        padding: 0 35px;
+    }
+
+    .video-grid .video-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+    .carousel-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+}
+/* ========================================
+   ABOUT US PAGE ANIMATION
+======================================== */
+
+/* Section heading */
+
+#about .section-heading {
+    opacity: 0;
+    animation: aboutHeadingIn 1s ease-out forwards;
+}
+
+
+/* Member grid */
+
+#about .member-grid {
+    opacity: 0;
+    animation: aboutGridIn 0.8s ease-out 0.2s forwards;
+}
+
+
+/* Individual member cards */
+
+#about .member-card {
+    opacity: 0;
+    animation: aboutCardIn 0.7s ease-out forwards;
+}
+
+
+/* Cards appear one by one */
+
+#about .member-card:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+#about .member-card:nth-child(2) {
+    animation-delay: 0.55s;
+}
+
+#about .member-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+#about .member-card:nth-child(4) {
+    animation-delay: 0.85s;
+}
+
+#about .member-card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+@keyframes aboutHeadingIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes aboutGridIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes aboutCardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* ========================================
+   HOME PAGE ANIMATION
+======================================== */
+
+/* Hero content */
+#home .hero-content {
+    opacity: 0;
+    animation: homeSlideLeft 1s ease-out forwards;
+}
+
+#home .hero-card {
+    opacity: 0;
+    animation: homeSlideRight 1s ease-out 0.2s forwards;
+}
+
+/* Hero buttons */
+#home .hero-buttons .btn {
+    opacity: 0;
+    animation: homeFadeUp 0.7s ease-out forwards;
+}
+
+#home .hero-buttons .btn:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+#home .hero-buttons .btn:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+
+/* ========================================
+   VIDEOS SECTION ANIMATION
+======================================== */
+
+#videos .section-heading {
+    opacity: 0;
+    animation: homeFadeUp 0.8s ease-out 0.2s forwards;
+}
+
+#videos .video-card {
+    opacity: 0;
+    animation: videoCardIn 0.7s ease-out forwards;
+}
+
+#videos .video-card:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+#videos .video-card:nth-child(2) {
+    animation-delay: 0.55s;
+}
+
+#videos .video-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+#videos .video-card:nth-child(4) {
+    animation-delay: 0.85s;
+}
+
+#videos .video-card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+
+/* ========================================
+   PERSONAL INTRODUCTIONS ANIMATION
+======================================== */
+
+#introductions .section-heading {
+    opacity: 0;
+    animation: homeFadeUp 0.8s ease-out forwards;
+}
+
+#introductions .introduction-card {
+    opacity: 0;
+    animation: introductionCardIn 0.7s ease-out forwards;
+}
+
+#introductions .introduction-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+#introductions .introduction-card:nth-child(2) {
+    animation-delay: 0.45s;
+}
+
+#introductions .introduction-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#introductions .introduction-card:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+#introductions .introduction-card:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+@keyframes homeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes homeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes homeFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes videoCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes introductionCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ========================================
+   PROJECTS PAGE ANIMATION
+======================================== */
+
+/* Projects heading */
+#projects .section-heading {
+    opacity: 0;
+    animation: projectsHeadingIn 0.9s ease-out forwards;
+}
+
+
+/* Project cards */
+#projects .project-card {
+    opacity: 0;
+    animation: projectCardIn 0.7s ease-out forwards;
+}
+
+
+/* Stagger each project card */
+#projects .project-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+#projects .project-card:nth-child(2) {
+    animation-delay: 0.45s;
+}
+
+#projects .project-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#projects .project-card:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+#projects .project-card:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
+#projects .project-card:nth-child(6) {
+    animation-delay: 1.05s;
+}
+
+#projects .project-card:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+#projects .project-card:nth-child(8) {
+    animation-delay: 1.35s;
+}
+
+
+/* ========================================
+   PROJECT ANIMATION KEYFRAMES
+======================================== */
+
+@keyframes projectsHeadingIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes projectCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
