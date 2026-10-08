@@ -1,4 +1,4 @@
-\# SINGKO Personal Portfolio
+\ SINGKO Personal Portfolio
 
 
 
@@ -6,7 +6,7 @@ SINGKO is a five-member personal portfolio website created for our Integrative P
 
 
 
-\## About the Project
+\ About the Project
 
 
 
@@ -14,7 +14,7 @@ This website presents our team members, personal introductions, projects, skills
 
 
 
-\## Team Members
+\Team Members
 
 
 
@@ -30,7 +30,7 @@ This website presents our team members, personal introductions, projects, skills
 
 
 
-\## Technologies Used
+\ Technologies Used
 
 
 
@@ -110,11 +110,11 @@ SINGKO-Personal-Portfolio/
 
 └── backend/
 
-&#x20;   ├── db.js
+    ├── db.js
 
-&#x20;   ├── server.js
+    ├── server.js
 
-&#x20;   ├── package.json
+    ├── package.json
 
-&#x20;   └── package-lock.json
+    └── package-lock.json
 
