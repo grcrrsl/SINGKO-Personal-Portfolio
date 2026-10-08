@@ -16,3 +16,6 @@ npm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Large video files
+assets/images/videos/
